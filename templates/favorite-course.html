@@ -1,0 +1,45 @@
+{# Displays the favorite course using URL query parameters #}
+{% extends "base.html" %}
+
+{% block title %}Favorite Course | Zachary Cho{% endblock %}
+
+{% block content %}
+
+<div class="row justify-content-center">
+    <div class="col-md-8">
+
+        <div class="card shadow-sm">
+            <div class="card-body p-4">
+
+                <h1 class="mb-3">My Favorite Course</h1>
+
+                <p class="lead">
+                    You entered your favorite course as:
+                    <strong>{{ subject }}{{ course_number }}</strong>
+                </p>
+
+                <hr>
+
+                <h2 class="h5 mt-4">Why I Enjoy This Course</h2>
+
+                <p>
+                    BMGT326 (Accounting Systems) is one of my favorite courses
+                    because it combines my interests in accounting and technology.
+                    Through this course, I gained hands-on experience using Excel
+                    and SQL to analyze data and better understand how information
+                    systems support business processes.
+                </p>
+
+                <div class="mt-3">
+                    <span class="badge bg-secondary me-2">Accounting Systems</span>
+                    <span class="badge bg-secondary me-2">Excel</span>
+                    <span class="badge bg-secondary">SQL</span>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}
