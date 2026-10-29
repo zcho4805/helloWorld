@@ -11,7 +11,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SECRET_KEY'] = 'beyond_course_scope'
 db.init_app(app)
 
-
+@app.route('/view')
 @app.route('/student/view')
 def student_view_all():
     students = Student.query.outerjoin(Major, Student.major_id == Major.major_id) \
